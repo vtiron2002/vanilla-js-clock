@@ -1,0 +1,65 @@
+:root {
+  --dark: #181818;
+  --accent: #00e19b;
+  --grey: #4c4c4c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.time {
+  color: var(--accent);
+  font-size: clamp(3rem, 10vw, 8rem);
+}
+
+ul.daysOfTheWeek {
+  display: flex;
+  list-style: none;
+}
+
+ul.daysOfTheWeek li {
+  color: var(--grey);
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+  font-size: clamp(0.5rem, 2vw, 5rem);
+}
+
+ul.daysOfTheWeek li.active {
+  color: var(--accent);
+}
+
+.buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: none;
+  color: var(--grey);
+  border: none;
+  cursor: pointer;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+button:hover {
+  color: var(--accent);
+  transition: 0.2s ease;
+}
+
+button.active {
+  color: var(--accent);
+}
