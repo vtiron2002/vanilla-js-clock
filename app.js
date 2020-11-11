@@ -49,7 +49,7 @@ const daysOfTheWeek = [
   "Friday",
   "Saturday",
 ];
-const currentDayOfTheWeek = new Date(Date.now()).getUTCDay();
+const currentDayOfTheWeek = new Date().getDay();
 daysOfTheWeek.forEach((day, i) => {
   const dayOfTheWeekLi = document.createElement("li");
   dayOfTheWeekLi.innerText = day;
